@@ -6,7 +6,7 @@
 
 ### Now you have to install the dependencies:
   ```
-   cd election
+   cd eth-election
    npm install
   ```
 ### Start Ganache.
