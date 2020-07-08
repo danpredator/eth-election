@@ -42,7 +42,10 @@ class Main extends Component {
               onChange={(input) => { this.candi = 2}}
             required /> candidate 2
           </div>
-          <button type="submit" class="btn btn-primary">Vote</button>
+           { this.props.voter
+              ? null
+              :<button type="submit" class="btn btn-primary">Vote</button>
+            }
         </form>
 
         

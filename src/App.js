@@ -56,6 +56,9 @@ class App extends Component {
           candidates: [...this.state.candidates, candidate]
         })
       }
+      const voter = await election.methods.voters(this.state.account).call()
+      this.setState({ current_vote: voter})
+
       this.setState({ loading: false})
       // console.log(this.state.candidates)
     } else {
@@ -71,7 +74,8 @@ class App extends Component {
     this.state = {
       account : '',
       candidatesCount : 0,
-      candidates : [],      
+      candidates : [],
+      current_vote:'',      
       loading : true
     }
 
@@ -121,6 +125,7 @@ class App extends Component {
                 : <Main
                   candidates={this.state.candidates}
                   vote={this.vote}
+                  voter={this.state.current_vote}
                   />
               }
             </main>
