@@ -22,7 +22,7 @@
     "truffle": "^5.1.33",
     "truffle-contract": "3.0.6",
     "web3": "1.0.0-beta.55",
-    "nodemon": "^1.17.3"
+    "nodemon": "^3.1.11"
   },
   "scripts": {
     "start": "react-scripts start",
